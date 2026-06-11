@@ -17,29 +17,29 @@ body {
   border: 1px solid #2f2f2f;
 }
 
+/* ---------- HERO ---------- */
+
 .hero {
-  position: relative;
   padding: 32px;
-  text-align: left;
 }
 
 .hero img {
   width: 100%;
   display: block;
-  margin-top: 24px;
-  filter: grayscale(100%);
+  margin-bottom: 28px;
 }
 
 .year {
   margin: 0;
   font-size: 14px;
   letter-spacing: 2px;
+  color: #c9a86a;
 }
 
 h1 {
-  margin: 4px 0 0;
+  margin: 6px 0 0;
   font-size: 64px;
-  line-height: 0.9;
+  line-height: .9;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -48,39 +48,52 @@ h2 {
   margin: 10px 0 0;
   font-size: 18px;
   font-weight: normal;
-  letter-spacing: 2px;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: #c9a86a;
 }
 
 .date {
+  margin-top: 18px;
   font-size: 24px;
-  margin: 18px 0 0;
   letter-spacing: 1px;
 }
 
+/* ---------- INTRO ---------- */
+
 .intro {
-  padding: 32px;
+  padding: 36px 32px;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 }
 
 .intro p {
-  margin: 0 0 14px;
+  margin: 0;
+  line-height: 1.7;
   font-size: 16px;
-  line-height: 1.6;
 }
+
+/* ---------- HEADINGS ---------- */
+
+h3 {
+  margin: 24px 0 14px;
+  font-size: 32px;
+  line-height: .95;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---------- TWO COLUMN SECTION ---------- */
 
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-bottom: 1px solid #333;
 }
 
 .info-block {
   padding: 32px;
   border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .info-block:last-child {
@@ -90,67 +103,89 @@ h2 {
 .info-block img {
   width: 100%;
   display: block;
-  margin-bottom: 22px;
-  filter: grayscale(100%);
 }
 
-h3 {
-  margin: 0 0 14px;
-  font-size: 38px;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.info-block p,
-.dance p {
+.info-block p {
+  line-height: 1.6;
   font-size: 15px;
-  line-height: 1.5;
 }
+
+/* ---------- SINGLE SECTIONS ---------- */
+
+.dance {
+  padding: 42px 32px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.dance img {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: 0 auto;
+}
+
+.dance p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ---------- BUTTONS ---------- */
 
 a {
   display: inline-block;
-  margin-top: 14px;
-  padding: 13px 18px;
+  margin-top: 18px;
+  padding: 14px 22px;
   color: #f4f1ea;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 13px;
   border: 1px solid #c9a86a;
+  transition: .25s;
 }
 
-.dance {
-  padding: 36px 32px;
-  text-align: center;
-  border-bottom: 1px solid #333;
+a:hover {
+  background: #c9a86a;
+  color: #111;
 }
 
-.dance img {
-  width: 180px;
-  max-width: 70%;
-  display: block;
-  margin: 24px auto 0;
-  filter: grayscale(100%);
-}
+/* ---------- CTA ---------- */
 
 .cta {
-  padding: 36px 32px;
+  padding: 50px 32px;
   text-align: center;
   border-bottom: 1px solid #333;
 }
 
+/* ---------- FOOTER ---------- */
+
 footer {
-  padding: 36px 32px;
+  padding: 40px 32px;
   text-align: center;
 }
 
 footer img {
-  width: 190px;
+  width: 180px;
   max-width: 70%;
 }
 
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-block {
+    border-right: none;
+  }
+
+}
+
 @media (max-width: 600px) {
+
   .hero,
   .intro,
   .info-block,
@@ -161,27 +196,46 @@ footer img {
   }
 
   h1 {
-    font-size: 46px;
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 16px;
   }
 
   h3 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .date {
     font-size: 20px;
   }
 
-  .info-grid {
-    grid-template-columns: 1fr;
+  .intro p,
+  .info-block p,
+  .dance p {
+    font-size: 14px;
   }
 
-  .info-block {
-    border-right: none;
-    border-bottom: 1px solid #333;
+}
+
+@media (max-width: 450px) {
+
+  h1 {
+    font-size: 40px;
   }
 
-  .info-block:last-child {
-    border-bottom: none;
+  h3 {
+    font-size: 24px;
   }
+
+  .date {
+    font-size: 18px;
+  }
+
+  a {
+    width: 100%;
+    text-align: center;
+  }
+
 }
